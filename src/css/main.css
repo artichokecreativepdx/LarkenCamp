@@ -1,0 +1,69 @@
+:root {
+  --white: #fffdf4;
+  --primary: #77a194;
+  --secondary: #c6d9bcff;
+  --gray: #b1aea3ff;
+  --tertiary: #587c90ff;
+  --black: #3b2f30ff;
+}
+/* * {
+  border: 1px solid red;
+} */
+body {
+  background: var(--white);
+}
+.container {
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+}
+section {
+  margin: auto;
+  width: 90%;
+}
+button {
+  background: var(--primary);
+  cursor: pointer;
+}
+button:hover {
+  background: var(--tertiary);
+}
+button .icon-large {
+  color: var(--white);
+}
+button .icon-large:hover {
+  color: var(--secondary);
+}
+a {
+  font-family: 'Poiret One', cursive;
+  font-size: 1.3em;
+
+  text-decoration: none;
+  color: var(--tertiary);
+  cursor: pointer;
+}
+h1,
+h2,
+h3 {
+  /* font-family: 'Dosis', sans-serif; */
+  font-family: 'Poiret One', cursive;
+  color: var(--black);
+}
+p,
+li {
+  font-family: 'Dosis', sans-serif;
+  color: var(--black);
+}
+
+@media only screen and (min-width: 760px) {
+  a {
+    font-size: 1.5em;
+  }
+  .container {
+    width: 100%;
+  }
+  section {
+    width: 70%;
+    margin: auto;
+  }
+}
