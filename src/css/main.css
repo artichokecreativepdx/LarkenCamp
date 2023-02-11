@@ -35,7 +35,7 @@ button .icon-large:hover {
   color: var(--secondary);
 }
 a {
-  font-family: 'Poiret One', cursive;
+  font-family: 'Figtree', sans-serif;
   font-size: 1.3em;
 
   text-decoration: none;
@@ -45,13 +45,12 @@ a {
 h1,
 h2,
 h3 {
-  /* font-family: 'Dosis', sans-serif; */
-  font-family: 'Poiret One', cursive;
+  font-family: 'Urbanist', sans-serif;
   color: var(--black);
 }
 p,
 li {
-  font-family: 'Dosis', sans-serif;
+  font-family: 'Urbanist', sans-serif;
   color: var(--black);
 }
 

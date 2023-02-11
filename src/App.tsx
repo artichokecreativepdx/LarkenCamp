@@ -1,48 +1,26 @@
-// import { useEffect, useState } from 'react';
-import logo from './larkenCamp.svg';
-// import axios from 'axios';
+import React from 'react';
+import { useRoutes } from 'react-router-dom';
+import Navigation from './components/navigation/Navigation';
+import Home from './pages/home';
+import Page1 from './pages/page1';
+import Page2 from './pages/page2';
+import Page3 from './pages/page3';
 
-// export type Parks = {
-//   CampsiteID: 'string';
-//   FacilityID: 'string';
-//   CampsiteName: 'string';
-//   CampsiteType: 'string';
-//   TypeOfUse: 'string';
-//   Loop: 'string';
-//   CampsiteAccessible: true;
-//   CampsiteLongitude: -118.0186111;
-//   CampsiteLatitude: 44.6969444;
-// };
-function App() {
-  // const [parks, setParks] = useState<Parks[] | null>();
-  // axios.defaults.baseURL =
-  //   'https://ridb.recreation.gov/api/v1/campsites?limit=50&offset=0';
-  // axios.defaults.headers['apikey'] = '95150cf7-f71e-473a-8f4f-ff73f0d4766c';
-  // axios.defaults.headers.post['Content-Type'] =
-  //   'application/x-www-form-urlencoded';
+const App: React.FC = (): JSX.Element => {
+  const mainRoutes = {
+    path: '/',
+    element: <Navigation />,
+    children: [
+      { path: '/', element: <Home /> },
+      { path: 'page1', element: <Page1 /> },
+      { path: 'page2', element: <Page2 /> },
+      { path: 'page3', element: <Page3 /> },
+    ],
+  };
 
-  // useEffect(() => {
-  //   const url =
-  //     'https://ridb.recreation.gov/api/v1/campsites?limit=50&offset=0';
-  //   axios.get(url).then((response) => {
-  //     setParks(response.data);
-  //   });
-  // });
+  const routing = useRoutes([mainRoutes]);
 
-  return (
-    <div className="container">
-      <header className="App-header">
-        <img src={logo} className="larkenCamp-logo" alt="logo" />
-      </header>
-      <div className="data">
-        {/* {parks
-          ? parks.map((park) => {
-              return <p>{park.CampsiteName + park.TypeOfUse}</p>;
-            })
-          : null} */}
-      </div>
-    </div>
-  );
-}
+  return <>{routing}</>;
+};
 
 export default App;
