@@ -10,7 +10,9 @@ import App from './App';
 
 const element = (
   <BrowserRouter>
-    <App />
+    <div className="container">
+      <App />
+    </div>
   </BrowserRouter>
 );
 const container = document.getElementById('root');
